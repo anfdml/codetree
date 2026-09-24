@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main {
+    static int n;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        n = sc.nextInt();
+        dfs(0);
+    }
+    public static void dfs(int num){
+        if(num==n){
+            return;
+        }
+        for(int i=0;i<=num;i++){
+            System.out.print("*");
+        }
+        System.out.println();
+        dfs(num+1);
+    }
+}
